@@ -11,14 +11,15 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor( element ) {
-
+    this.element = element;
+    this.registerEvents();
   }
 
   /**
    * Вызывает метод render для отрисовки страницы
    * */
   update() {
-
+    /*this.render({ account_id: 3}); //временно Бизнес*/
   }
 
   /**
@@ -28,7 +29,9 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
-
+    this.element.querySelector('.remove-account').onclick = e => {
+      this.removeAccount();
+    }
   }
 
   /**
@@ -40,8 +43,14 @@ class TransactionsPage {
    * либо обновляйте только виджет со счетами и формы создания дохода и расхода
    * для обновления приложения
    * */
-  removeAccount() {
-
+  removeAccount() {/*
+    Account.remove({ id: 1}, (err, resp) => {
+      if(resp && resp.success) {
+        App.updateWidgets();
+        App.updateForms();
+        this.clear();
+      }
+    })*/
   }
 
   /**
@@ -60,8 +69,12 @@ class TransactionsPage {
    * Получает список Transaction.list и полученные данные передаёт
    * в TransactionsPage.renderTransactions()
    * */
-  render(options){
-
+  render(options) {
+    Account.get(options.account_id, (err, resp) => {
+      if(resp) {
+        this.renderTitle(resp.data.name);
+      }
+    });
   }
 
   /**
@@ -77,7 +90,7 @@ class TransactionsPage {
    * Устанавливает заголовок в элемент .content-title
    * */
   renderTitle(name){
-
+    this.element.querySelector('.content-title').innerText = name;
   }
 
   /**

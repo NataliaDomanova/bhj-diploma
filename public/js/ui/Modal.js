@@ -9,11 +9,25 @@ class Modal {
    * Устанавливает текущий элемент в свойство element
    * Регистрирует обработчики событий с помощью Modal.registerEvents()
    * Если переданный элемент не существует,
-   * необходимо выкинуть ошибку.
+   * необходимо выкинуть ошибку.  (Если передан пустой элемент в конструктор, должна быть выброшена ошибка)
    * */
   constructor(element){
-
+    this.element = element;
+    this.registerEvents();
+    if(!element) throw "элемент не существует";
+  } 
+  /*
+  constructor(element){
+    if(!element) throw new Error("элемент не существует");
+      try {
+        this.element = element;
+        this.registerEvents();
+      } 
+      catch(error) {
+          console.log(error.message)
+      }    
   }
+  */
 
   /**
    * При нажатии на элемент с data-dismiss="modal"
@@ -21,7 +35,11 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-
+    this.element.querySelectorAll('[data-dismiss="modal"]').forEach(button => {
+      button.onclick = e => {      
+      this.onClose(e);
+      };    
+    });
   }
 
   /**
@@ -29,19 +47,20 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose(e) {
-
+    e.preventDefault();
+    this.close();
   }
   /**
    * Открывает окно: устанавливает CSS-свойство display
    * со значением «block»
    * */
   open() {
-
+    this.element.style.display = 'block';
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
   close(){
-
+    this.element.style.removeProperty('display');
   }
 }

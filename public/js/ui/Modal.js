@@ -11,24 +11,14 @@ class Modal {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.  (Если передан пустой элемент в конструктор, должна быть выброшена ошибка)
    * */
-  constructor(element){
+  constructor(element) {
+    if (!element) {
+      throw new Error("Переданный элемент не существует");
+    };
     this.element = element;
     this.registerEvents();
-    if(!element) throw "элемент не существует";
   } 
-  /*
-  constructor(element){
-    if(!element) throw new Error("элемент не существует");
-      try {
-        this.element = element;
-        this.registerEvents();
-      } 
-      catch(error) {
-          console.log(error.message)
-      }    
-  }
-  */
-
+  
   /**
    * При нажатии на элемент с data-dismiss="modal"
    * должен закрыть текущее окно

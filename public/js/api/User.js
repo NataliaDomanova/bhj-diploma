@@ -24,9 +24,8 @@ class User {
    * Возвращает текущего авторизованного пользователя
    * из локального хранилища
    * */
-  static current() {
-    const user = localStorage.user;
-    return user ? JSON.parse(user) : undefined;
+  static current() {    
+    return JSON.parse(localStorage.getItem('user'));
   }
 
   /**
@@ -45,7 +44,7 @@ class User {
         }
         callback(err, response);
       }
-    })
+    });
   }
 
   /**

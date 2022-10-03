@@ -13,24 +13,13 @@ class AsyncForm {
    * через registerEvents()
    * */
   constructor(element) {
-    if(!element) throw "форма не заполнена";
+    if (!element) {
+      throw new Error("Переданный элемент не существует");
+    };
     this.element = element;
     this.registerEvents();    
   }
-  
-  /*
-  constructor(element){
-    if(!element) throw new Error("элемент не существует");
-      try {
-        this.element = element;
-        this.registerEvents();
-      } 
-      catch(error) {
-          console.log(error.message)
-      }    
-  }
-  */
-     
+ 
   /**
    * Необходимо запретить отправку формы и в момент отправки
    * вызывает метод submit()

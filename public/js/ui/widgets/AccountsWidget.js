@@ -3,6 +3,7 @@
  * отображения счетов в боковой колонке
  * */
 
+
 class AccountsWidget {
   /**
    * Устанавливает текущий элемент в свойство element
@@ -13,25 +14,15 @@ class AccountsWidget {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor( element ) {
+  constructor(element) {
+    if (!element) {
+      throw new Error("Переданный элемент не существует");
+    };
     this.element = element;
     this.registerEvents();
-    this.update();
-    if(!element) throw "элемент не передан"
+    this.update();    
   }
-   /*
-  constructor(element){
-    if(!element) throw new Error("элемент не существует");
-      try {
-        this.element = element;
-        this.registerEvents();
-      } 
-      catch(error) {
-          console.log(error.message)
-      }    
-  }
-  */
-
+   
   /**
    * При нажатии на .create-account открывает окно
    * #modal-new-account для создания нового счёта
@@ -54,8 +45,7 @@ class AccountsWidget {
     }
   }  
   
-
-  /**
+  /**  
    * Метод доступен только авторизованным пользователям
    * (User.current()).
    * Если пользователь авторизован, необходимо
@@ -73,8 +63,7 @@ class AccountsWidget {
           resp.data.forEach(a => this.renderItem(a));
         }
       });
-    }
-    
+    }    
   }
 
   /**
@@ -96,9 +85,9 @@ class AccountsWidget {
   onSelectAccount( element ) {
     document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
     element.classList.add('active');
-    //App.showPage( 'transactions', { account_id: id_счета});   
+    console.log(element)
+    App.showPage('transactions', {account_id: element.id});
   }
-
   /**
    * Возвращает HTML-код счёта для последующего
    * отображения в боковой колонке.
@@ -108,7 +97,7 @@ class AccountsWidget {
     return `<li class="account" data-id="${item.id}">
                 <a href="#">
                     <span>${item.name}</span> 
-                    <span>${item.sum}</span>
+                    <span>${(item.sum).toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </a>
             </li>`;
   }

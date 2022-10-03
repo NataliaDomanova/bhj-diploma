@@ -34,9 +34,55 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "ХОУМКРЕДИТ",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z23zkl8i0t5rr"
+    },
+    {
+      "name": "ЗАРПЛАТНАЯ КАРТА",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z23zkl8i0thc3"
+    },
+    {
+      "name": "ЗАНАЧКА",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z23xgl8korvwg"
+    },
+    {
+      "name": "карта",
+      "user_id": "2f5z23gwl8ep29h3",
+      "id": "2f5z23xwl8kvj8bm"
     }
   ],
   "transactions": [
+    { 
+      "account_id": "1", 
+      "created_at": "2019-09-15 10:24:02", 
+      "id": "1", 
+      "name": "Кредит", 
+      "sum": 5000, 
+      "type": "expense", 
+      "user_id": "1"
+     },
+    { "account_id": "1", 
+      "created_at": "2019-09-17 15:53:02", 
+      "id": "2", 
+      "name": "Баланс на дебетовке", 
+      "sum": 3200, 
+      "type": "income", 
+      "user_id": "1" 
+    },
+    {
+      "account_id": "1", 
+      "created_at": "2019-09-19 20:12:02", 
+      "id": "3", 
+      "name": "Копилка", 
+      "sum": 1500, 
+      "type": "income", 
+      "user_id": "1" 
+    },
     {
       "account_id": "2",
       "created_at": "2019-09-26 16:23:02",
@@ -83,67 +129,103 @@
       "user_id": "1"
     },
     {
-      "account_id": "3",
-      "created_at": "2017-10-15 13:27:02",
-      "id": "9",
-      "name": "На банду",
-      "sum": 15000,
-      "type": "expense",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2017-09-17 13:27:02",
-      "id": "10",
-      "name": "На стволы",
-      "sum": 6000,
-      "type": "expense",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2017-12-27 13:27:02",
-      "id": "11",
-      "name": "Прибыль с банка",
-      "sum": 1500000,
+      "id": "2f5z24xgl8mcdjno",
       "type": "income",
-      "user_id": "1"
+      "name": "процент от вклада",
+      "sum": 5000,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T00:52:27.972Z"
     },
     {
-      "account_id": "3",
-      "created_at": "2018-01-15 13:27:02",
-      "id": "12",
-      "name": "Прибыль с магазина",
-      "sum": 300000,
-      "type": "income",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2018-01-15 13:27:02",
-      "id": "13",
-      "name": "Подарок сизого",
-      "sum": 20000,
-      "type": "income",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2017-09-15 13:27:02",
-      "id": "14",
-      "name": "На охрану",
-      "sum": 60000,
+      "id": "2f5z24xgl8mce0ku",
       "type": "expense",
-      "user_id": "1"
+      "name": "шаурма",
+      "sum": 130,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T00:52:49.902Z"
     },
     {
-      "account_id": "3",
-      "created_at": "2017-10-15 13:27:02",
-      "id": "15",
-      "name": "На бумер",
-      "sum": 300000,
+      "id": "2f5z242wl8njw908",
       "type": "expense",
-      "user_id": "1"
+      "name": "пончики",
+      "sum": 300,
+      "account_id": "2f5z23zkl8i0thc3",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T21:10:44.119Z"
+    },
+    {
+      "id": "2f5z242wl8njwxa4",
+      "type": "income",
+      "name": "зачисление зарплаты",
+      "sum": 50000,
+      "account_id": "2f5z23zkl8i0thc3",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T21:11:15.580Z"
+    },
+    {
+      "id": "2f5z22xwl8np81my",
+      "type": "expense",
+      "name": "спички",
+      "sum": 5000,
+      "account_id": "2f5z23zkl8i0thc3",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T23:39:52.521Z"
+    },
+    {
+      "id": "2f5z22xwl8npa3dl",
+      "type": "expense",
+      "name": "кирпич",
+      "sum": 200,
+      "account_id": "2f5z23zkl8i0thc3",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T23:41:28.089Z"
+    },
+    {
+      "id": "2f5z22xwl8npculh",
+      "type": "income",
+      "name": "нашла ",
+      "sum": 30.5,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T23:43:36.677Z"
+    },
+    {
+      "id": "2f5z23c8l8npkqaq",
+      "type": "income",
+      "name": "перевод 1 ",
+      "sum": 3000.505,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-09-29T23:49:44.353Z"
+    },
+    {
+      "id": "2f5z24m4l8qqe6b2",
+      "type": "expense",
+      "name": "123",
+      "sum": 3000,
+      "account_id": "2",
+      "user_id": "1",
+      "created_at": "2022-10-02T02:35:56.653Z"
+    },
+    {
+      "id": "2f5z246cl8qrcx5d",
+      "type": "income",
+      "name": "процент",
+      "sum": 100,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-02T03:02:57.744Z"
+    },
+    {
+      "id": "2f5z24kgl8s0bnyp",
+      "type": "income",
+      "name": "процент",
+      "sum": 2000,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-03T00:01:41.904Z"
     }
   ]
 }

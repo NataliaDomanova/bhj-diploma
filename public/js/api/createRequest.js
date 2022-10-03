@@ -20,25 +20,24 @@ const createRequest = (options = {}) => {
     
     if(options.callback) {
         //xhr.onerror = () => {}
-        xhr.onreadystatechange = () => {
-            if(xhr.readyState === XMLHttpRequest.DONE) {
+        xhr.onload = () => {
             let resp = null;
             let err = null; 
-                
-                if(xhr.status === 200) {
-                    const r = xhr.response;
-                    if(r && r.success) {
+            const r = xhr.response;
+
+            try {
+                if(r && r.success) {
                     resp = r;
                 } else {
                     err = r;
                 }
-                } else {
-                err = new Error('Ошибка...');                
-            }        
-        options.callback(err, resp);
-            }       
-        }
-    };
+            } catch(e) {
+                err = e;
+            }
+
+            options.callback(err, resp);
+            }                
+        };       
     
     xhr.open(options.method, url);
     xhr.send(formData);

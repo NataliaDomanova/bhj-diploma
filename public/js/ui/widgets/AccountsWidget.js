@@ -1,9 +1,8 @@
+
 /**
  * Класс AccountsWidget управляет блоком
  * отображения счетов в боковой колонке
  * */
-
-
 class AccountsWidget {
   /**
    * Устанавливает текущий элемент в свойство element
@@ -84,9 +83,8 @@ class AccountsWidget {
    * */
   onSelectAccount( element ) {
     document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-    element.classList.add('active');
-    console.log(element)
-    App.showPage('transactions', {account_id: element.id});
+    element.classList.add('active');      
+    App.showPage('transactions', { account_id: element.dataset.id});
   }
   /**
    * Возвращает HTML-код счёта для последующего

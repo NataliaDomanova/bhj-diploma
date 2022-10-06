@@ -23,7 +23,6 @@ class Sidebar {
       document.querySelector('.sidebar-mini').classList.toggle('sidebar-open');
       document.querySelector('.sidebar-mini').classList.toggle('sidebar-collapse');
     })
-    console.log(document.querySelector('.sidebar-mini'))
   }
 
   /**

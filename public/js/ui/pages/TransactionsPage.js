@@ -23,9 +23,11 @@ class TransactionsPage {
    * Вызывает метод render для отрисовки страницы
    * */
   update() {
+    /*
     if(this.render()) {
       this.render();
     }
+    */
     this.render();
   }
   /**
@@ -53,7 +55,7 @@ class TransactionsPage {
     const question = 'Вы действительно хотите удалить этот счёт?';
     const result = confirm(question);
       if(result) {
-        Account.remove({id: '2f5z21mwl8jhonjd'}, (err, resp) => { 
+        Account.remove({id: document.querySelector('.active').getAttribute('data-id')}, (err, resp) => { 
           if(resp && resp.success) {
             console.log(resp.data)
             App.updateWidgets();
@@ -91,16 +93,18 @@ class TransactionsPage {
      if(!options) {
        return;
      }
-      
-     Account.get(options.account_id, (err, resp) => {
+     options.lastOptions = options;  
+     Account.get(options.account_id, (err, resp) => {      
       if(resp && resp.data) {
+        console.log(resp.data)
         this.renderTitle(resp.data.name);
       }
     });
     
-    Transaction.list(options, (err, resp) => {
+    Transaction.list({account_id: options.account_id}, (err, resp) => {
       if(resp && resp.success) {
-        this.renderTransactions();       
+        this.renderTransactions(); 
+        console.log(resp.data)      
       }
     })
     options.lastOptions = options; 
@@ -121,6 +125,7 @@ class TransactionsPage {
    * */
   renderTitle(name){
     this.element.querySelector('.content-title').innerText = name;
+    console.log(this.element.querySelector('.content-title'))
   }
 
   /**
@@ -198,7 +203,7 @@ class TransactionsPage {
   }
 
   renderTransactions(data){
-    console.log(document.querySelector('.content'))
+    //console.log(document.querySelector('.content'))
     document.querySelector('.content').insertAdjacentHTML('beforeend', this.getTransactionHTML(data));
   }  
 }

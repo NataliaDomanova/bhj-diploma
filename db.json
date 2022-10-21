@@ -41,19 +41,19 @@
       "id": "2f5z23zkl8i0t5rr"
     },
     {
-      "name": "ЗАНАЧКА",
-      "user_id": "2f5z2270l8dpfy90",
-      "id": "2f5z23xgl8korvwg"
-    },
-    {
-      "name": "ВКЛАД ГАЗПРОМ",
-      "user_id": "2f5z23gwl8ep29h3",
-      "id": "2f5z2470l8xp45in"
-    },
-    {
       "name": "КАРТА СБЕРБАНКА",
       "user_id": "2f5z23gwl8ep29h3",
       "id": "2f5z2470l8xp5tiu"
+    },
+    {
+      "name": "КАРТА СБЕРБАНК",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z2iol90ppuye"
+    },
+    {
+      "name": "НАЛИЧНЫЕ",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z247cl96chjpv"
     }
   ],
   "transactions": [
@@ -130,85 +130,94 @@
       "user_id": "1"
     },
     {
-      "id": "2f5z24xgl8mcdjno",
+      "id": "2f5z24zwl994zc1k",
       "type": "income",
-      "name": "процент от вклада",
-      "sum": 5000,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "name": "ПЕРВОНАЧАЛЬНЫЙ ВКЛАД",
+      "sum": 500000,
+      "account_id": "2f5z2iol90ppuye",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-09-29T00:52:27.972Z"
+      "created_at": "2022-10-14T23:44:09.656Z"
     },
     {
-      "id": "2f5z24xgl8mce0ku",
+      "id": "2f5z24zwl994zwvy",
       "type": "expense",
-      "name": "шаурма",
-      "sum": 130,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "name": "ОПЛАТА ИПОТЕКИ ",
+      "sum": 25000,
+      "account_id": "2f5z2iol90ppuye",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-09-29T00:52:49.902Z"
+      "created_at": "2022-10-14T23:44:36.670Z"
     },
     {
-      "id": "2f5z22xwl8npculh",
+      "id": "2f5z24qcl9bwa6d1",
       "type": "income",
-      "name": "нашла ",
-      "sum": 30.5,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "name": "НАКОПЛЕНИЯ",
+      "sum": 250000,
+      "account_id": "2f5z247cl96chjpv",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-09-29T23:43:36.677Z"
+      "created_at": "2022-10-16T22:03:57.492Z"
     },
     {
-      "id": "2f5z23c8l8npkqaq",
+      "id": "2f5z24mcl9erqkli",
       "type": "income",
-      "name": "перевод 1 ",
-      "sum": 3000.505,
+      "name": "ВКЛАД",
+      "sum": 580000,
       "account_id": "2f5z23zkl8i0t5rr",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-09-29T23:49:44.353Z"
+      "created_at": "2022-10-18T22:20:02.885Z"
     },
     {
-      "id": "2f5z246cl8qrcx5d",
+      "id": "2f5z23zcl9erzr7q",
       "type": "income",
-      "name": "процент",
-      "sum": 100,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "name": "НАЧИСЛЕНИЕ ПРОЦЕНТОВ НА ВКЛАД",
+      "sum": 13000,
+      "account_id": "2f5z2iol90ppuye",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-02T03:02:57.744Z"
+      "created_at": "2022-10-18T22:27:11.365Z"
     },
     {
-      "id": "2f5z24kgl8s0bnyp",
-      "type": "income",
-      "name": "процент",
+      "id": "2f5z23qgl9ga5zs7",
+      "type": "expense",
+      "name": "МАГАЗИН",
+      "sum": 4890,
+      "account_id": "2f5z247cl96chjpv",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-19T23:43:41.671Z"
+    },
+    {
+      "id": "2f5z23qgl9ga6pkc",
+      "type": "expense",
+      "name": "ПАРИКМАХЕРСКАЯ",
       "sum": 2000,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "account_id": "2f5z247cl96chjpv",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-03T00:01:41.904Z"
+      "created_at": "2022-10-19T23:44:15.084Z"
     },
     {
-      "id": "2f5z2470l8xp6e34",
-      "type": "income",
-      "name": "НАЧИСЛЕНИЕ ПРОЦЕНТОВ",
-      "sum": 5000,
-      "account_id": "2f5z2470l8xp45in",
-      "user_id": "2f5z23gwl8ep29h3",
-      "created_at": "2022-10-06T23:36:17.104Z"
+      "id": "2f5z23qgl9ga79ri",
+      "type": "expense",
+      "name": "ДИВАН",
+      "sum": 50000,
+      "account_id": "2f5z247cl96chjpv",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-19T23:44:41.262Z"
     },
     {
-      "id": "2f5z2470l8xp6xdt",
-      "type": "income",
-      "name": "АВАНС",
-      "sum": 17000,
-      "account_id": "2f5z2470l8xp5tiu",
-      "user_id": "2f5z23gwl8ep29h3",
-      "created_at": "2022-10-06T23:36:42.113Z"
-    },
-    {
-      "id": "2f5z2470l8xp7k7r",
+      "id": "2f5z2274l9hoqf5l",
       "type": "expense",
       "name": "КВАРТПЛАТА",
-      "sum": 10000,
-      "account_id": "2f5z2470l8xp5tiu",
-      "user_id": "2f5z23gwl8ep29h3",
-      "created_at": "2022-10-06T23:37:11.703Z"
+      "sum": 15000,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-20T23:19:15.512Z"
+    },
+    {
+      "id": "2f5z21uwl9hphn6z",
+      "type": "expense",
+      "name": "МАГАЗИН",
+      "sum": 1550,
+      "account_id": "2f5z23zkl8i0t5rr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-20T23:40:25.642Z"
     }
   ]
 }

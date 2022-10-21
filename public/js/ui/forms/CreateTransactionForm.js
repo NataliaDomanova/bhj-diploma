@@ -19,19 +19,15 @@ class CreateTransactionForm extends AsyncForm {
  
   renderAccountsList() {
     Account.list(null, (err, resp) =>{
-      if(resp && resp.success && resp.data) {
-        document.querySelectorAll('option').forEach(el => el.remove());
-        resp.data.forEach(element => {
-          const selectExpense = document.getElementById('expense-accounts-list');
-          selectExpense.insertAdjacentHTML('beforeend', `<option value="${element.id}">${element.name}</option>`);
-          const selectIncome = document.getElementById('income-accounts-list');
-          selectIncome.insertAdjacentHTML('beforeend', `<option value="${element.id}">${element.name}</option>`);
-        });              
+      if(resp && resp.success && resp.data) {   
+        //console.log(resp.data);   
+        const select = this.element.querySelector('select');
+        select.innerHTML = resp.data.reduce((acc, item) => {
+        return  acc + `<option value="${item.id}">${item.name}</option>`          
+        }, 0);
       }
-    }) 
-                   
-  }   
-    
+    })          
+  }
   /**
    * Создаёт новую транзакцию (доход или расход)
    * с помощью Transaction.create. По успешному результату

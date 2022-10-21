@@ -24,17 +24,13 @@ const createRequest = (options = {}) => {
             let resp = null;
             let err = null; 
             const r = xhr.response;
-
-            try {
+           
                 if(r && r.success) {
                     resp = r;
                 } else {
                     err = r;
                 }
-            } catch(e) {
-                err = e;
-            }
-
+            
             options.callback(err, resp);
             }                
         };       

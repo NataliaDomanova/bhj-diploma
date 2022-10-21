@@ -24,7 +24,7 @@ class TransactionsPage {
    * */
   update() {  
     if(this.render()) {  
-      this.update();
+      this.render();
     }
     this.render(); 
   }

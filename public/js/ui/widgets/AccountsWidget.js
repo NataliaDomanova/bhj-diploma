@@ -84,7 +84,7 @@ class AccountsWidget {
   onSelectAccount( element ) {
     document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
     element.classList.add('active');      
-    App.showPage('transactions', { account_id: element.dataset.id});
+    App.showPage('transactions', { account_id: element.dataset.id});   
   }
   /**
    * Возвращает HTML-код счёта для последующего

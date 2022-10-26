@@ -17,17 +17,16 @@ class TransactionsPage {
     };
     this.element = element;
     this.registerEvents();
+    this.lastOptions;
   }
 
   /**
    * Вызывает метод render для отрисовки страницы
    * */
   update() {  
-    if(this.render()) {  
-      this.render();
-    }
-    this.render(); 
+    this.render(this.lastOptions);
   }
+  
   /**
    * Отслеживает нажатие на кнопку удаления транзакции
    * и удаления самого счёта. Внутри обработчика пользуйтесь
@@ -56,14 +55,17 @@ class TransactionsPage {
    * для обновления приложения
    * */
   removeAccount() {
-    if(!document.querySelector('.active')) {
+    if(!this.lastOptions) {
+      console.log(this.lastOptions);
       return;
     }
 
     const question = 'Вы действительно хотите удалить этот счёт?';
     const result = confirm(question);
       if(result) {
-        Account.remove({id: document.querySelector('.active').getAttribute('data-id')}, (err, resp) => { 
+        console.log(this.lastOptions);
+        //Account.remove({id: document.querySelector('.active').getAttribute('data-id')}, (err, resp) => { 
+        Account.remove({id: this.lastOptions.account_id}, (err, resp) => {   
           if(resp && resp.success) {
             //console.log(resp.data)
             App.updateWidgets();
@@ -82,15 +84,13 @@ class TransactionsPage {
   removeTransaction( id ) {
     const question = 'Вы действительно хотите удалить эту транзакцию?';
     const result = confirm(question);
-    if(result) {
-      Transaction.remove ({ id: document.querySelector('.transaction__remove').dataset.id=id }, (err, resp) => {
-        if(resp && resp.success) {
-          App.update();           
-          this.update();
-          App.updateWidgets();          
-        }
-      })
-    }
+      if(result) {
+        Transaction.remove ({ id } , (err, resp) => {  
+          if(resp && resp.success) {
+            App.update();                     
+          }
+        })
+      }
   }
 
   /**
@@ -99,32 +99,28 @@ class TransactionsPage {
    * Получает список Transaction.list и полученные данные передаёт
    * в TransactionsPage.renderTransactions()
    * */
-  render(options) {             //options = {account_id: 23}
-     if(!options) {
-       return;
+  render(options) {   
+     if(!options) { 
+       return;                  
      }
-     //options.lastOptions = options;
-     
+
+     this.lastOptions = options;
+
      Account.get(options.account_id, (err, resp) => {      
       if(resp && resp.data) {
-        //console.log(resp.data);
-        console.log(options);
         this.renderTitle(resp.data.name);
       }
     });
     
     Transaction.list({account_id: options.account_id}, (err, resp) => {
       if(resp && resp.success) {
-        this.renderTransactions(resp.data); 
-        //console.log(resp.data);
-        console.log(options);      
+        this.renderTransactions(resp.data);  
       }
     })
-    
-    //options.lastOptions = options;
-    options.lastOptions = document.querySelector('.active').dataset.id;
-    console.log(options.lastOptions);
+
+    console.log(this.lastOptions);
   }
+
   /**
    * Очищает страницу. Вызывает
    * TransactionsPage.renderTransactions() с пустым массивом.
@@ -133,9 +129,11 @@ class TransactionsPage {
   clear() {
     this.renderTransactions([]);
     this.renderTitle('Название счета'); 
-    //options.lastOptions = '';
-    document.querySelector('.active').dataset.id = '';
+    console.log(this.lastOptions);
+    this.lastOptions = ''; 
+    console.log(this.lastOptions);
   }
+
   /**
    * Устанавливает заголовок в элемент .content-title
    * */

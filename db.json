@@ -36,24 +36,19 @@
       "id": "3"
     },
     {
-      "name": "ХОУМКРЕДИТ",
-      "user_id": "2f5z2270l8dpfy90",
-      "id": "2f5z23zkl8i0t5rr"
-    },
-    {
-      "name": "КАРТА СБЕРБАНКА",
-      "user_id": "2f5z23gwl8ep29h3",
-      "id": "2f5z2470l8xp5tiu"
-    },
-    {
       "name": "КАРТА СБЕРБАНК",
       "user_id": "2f5z2270l8dpfy90",
-      "id": "2f5z2iol90ppuye"
+      "id": "2f5z22j0l9owdadr"
+    },
+    {
+      "name": "ВКЛАД ХОУМКРЕДИТ",
+      "user_id": "2f5z2270l8dpfy90",
+      "id": "2f5z22j0l9owdqeb"
     },
     {
       "name": "НАЛИЧНЫЕ",
       "user_id": "2f5z2270l8dpfy90",
-      "id": "2f5z247cl96chjpv"
+      "id": "2f5z22j0l9owmhg4"
     }
   ],
   "transactions": [
@@ -130,94 +125,112 @@
       "user_id": "1"
     },
     {
-      "id": "2f5z24zwl994zc1k",
+      "id": "2f5z22j0l9owfbag",
       "type": "income",
-      "name": "ПЕРВОНАЧАЛЬНЫЙ ВКЛАД",
-      "sum": 500000,
-      "account_id": "2f5z2iol90ppuye",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-14T23:44:09.656Z"
-    },
-    {
-      "id": "2f5z24zwl994zwvy",
-      "type": "expense",
-      "name": "ОПЛАТА ИПОТЕКИ ",
-      "sum": 25000,
-      "account_id": "2f5z2iol90ppuye",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-14T23:44:36.670Z"
-    },
-    {
-      "id": "2f5z24qcl9bwa6d1",
-      "type": "income",
-      "name": "НАКОПЛЕНИЯ",
-      "sum": 250000,
-      "account_id": "2f5z247cl96chjpv",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-16T22:03:57.492Z"
-    },
-    {
-      "id": "2f5z24mcl9erqkli",
-      "type": "income",
-      "name": "ВКЛАД",
-      "sum": 580000,
-      "account_id": "2f5z23zkl8i0t5rr",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-18T22:20:02.885Z"
-    },
-    {
-      "id": "2f5z23zcl9erzr7q",
-      "type": "income",
-      "name": "НАЧИСЛЕНИЕ ПРОЦЕНТОВ НА ВКЛАД",
-      "sum": 13000,
-      "account_id": "2f5z2iol90ppuye",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-18T22:27:11.365Z"
-    },
-    {
-      "id": "2f5z23qgl9ga5zs7",
-      "type": "expense",
-      "name": "МАГАЗИН",
-      "sum": 4890,
-      "account_id": "2f5z247cl96chjpv",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-19T23:43:41.671Z"
-    },
-    {
-      "id": "2f5z23qgl9ga6pkc",
-      "type": "expense",
-      "name": "ПАРИКМАХЕРСКАЯ",
-      "sum": 2000,
-      "account_id": "2f5z247cl96chjpv",
-      "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-19T23:44:15.084Z"
-    },
-    {
-      "id": "2f5z23qgl9ga79ri",
-      "type": "expense",
-      "name": "ДИВАН",
+      "name": "НАЧИСЛЕНИЕ ЗАРПЛАТЫ",
       "sum": 50000,
-      "account_id": "2f5z247cl96chjpv",
+      "account_id": "2f5z22j0l9owdadr",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-19T23:44:41.262Z"
+      "created_at": "2022-10-26T00:28:57.448Z"
     },
     {
-      "id": "2f5z2274l9hoqf5l",
+      "id": "2f5z22j0l9owfp7j",
+      "type": "expense",
+      "name": "ОПЛАТА ДЕТСАДА",
+      "sum": 3650,
+      "account_id": "2f5z22j0l9owdadr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:29:15.487Z"
+    },
+    {
+      "id": "2f5z22j0l9owgm2s",
+      "type": "income",
+      "name": "НАЧИСЛЕНИЕ АВАНСА",
+      "sum": 25000,
+      "account_id": "2f5z22j0l9owdadr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:29:58.084Z"
+    },
+    {
+      "id": "2f5z22j0l9owhr6q",
       "type": "expense",
       "name": "КВАРТПЛАТА",
       "sum": 15000,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "account_id": "2f5z22j0l9owdadr",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-20T23:19:15.512Z"
+      "created_at": "2022-10-26T00:30:51.362Z"
     },
     {
-      "id": "2f5z21uwl9hphn6z",
-      "type": "expense",
-      "name": "МАГАЗИН",
-      "sum": 1550,
-      "account_id": "2f5z23zkl8i0t5rr",
+      "id": "2f5z22j0l9owid8j",
+      "type": "income",
+      "name": "ПЕРВОНАЧАЛЬНЫЙ ВКЛАД",
+      "sum": 500000,
+      "account_id": "2f5z22j0l9owdqeb",
       "user_id": "2f5z2270l8dpfy90",
-      "created_at": "2022-10-20T23:40:25.642Z"
+      "created_at": "2022-10-26T00:31:19.939Z"
+    },
+    {
+      "id": "2f5z22j0l9owiqoj",
+      "type": "expense",
+      "name": "ИПОТЕКА",
+      "sum": 25000,
+      "account_id": "2f5z22j0l9owdqeb",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:31:37.363Z"
+    },
+    {
+      "id": "2f5z22j0l9owj8mo",
+      "type": "income",
+      "name": "НАЧИСЛЕНИЕ ПРОЦЕНТОВ",
+      "sum": 15800,
+      "account_id": "2f5z22j0l9owdqeb",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:32:00.625Z"
+    },
+    {
+      "id": "2f5z22j0l9owmrcg",
+      "type": "income",
+      "name": "ЗАНАЧКА",
+      "sum": 28000,
+      "account_id": "2f5z22j0l9owmhg4",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:34:44.848Z"
+    },
+    {
+      "id": "2f5z22j0l9ownymp",
+      "type": "income",
+      "name": "ВЕРНУЛИ ДОЛГ",
+      "sum": 10000,
+      "account_id": "2f5z22j0l9owmhg4",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:35:40.945Z"
+    },
+    {
+      "id": "2f5z22j0l9owof8k",
+      "type": "expense",
+      "name": "СТУЛ",
+      "sum": 4200,
+      "account_id": "2f5z22j0l9owmhg4",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:36:02.468Z"
+    },
+    {
+      "id": "2f5z22j0l9owp65m",
+      "type": "expense",
+      "name": "СТОЛ",
+      "sum": 10500,
+      "account_id": "2f5z22j0l9owmhg4",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:36:37.354Z"
+    },
+    {
+      "id": "2f5z240kl9owvukc",
+      "type": "income",
+      "name": "ПЕРЕВОД",
+      "sum": 30000,
+      "account_id": "2f5z22j0l9owdadr",
+      "user_id": "2f5z2270l8dpfy90",
+      "created_at": "2022-10-26T00:41:48.923Z"
     }
   ]
 }
